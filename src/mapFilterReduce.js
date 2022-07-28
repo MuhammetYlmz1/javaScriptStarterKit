@@ -15,7 +15,7 @@ cart.map(product=>{
 //acc->aaccumulator ---- 0 değeri acc nin başlangıç değeri---- yaptiğı iş unitPriceları tek tek topluyor 
 let total=cart.reduce((acc,product)=>acc+product.unitPrice,0)
 console.log(total)
-
+ 
 //map ve filter genellikle kullanılanlar
 
 
