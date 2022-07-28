@@ -12,7 +12,17 @@ let cart=[
 cart.map(product=>{
     console.log(product.productName+" - "+product.unitPrice* product.quantiyty)
 })
+//acc->aaccumulator ---- 0 değeri acc nin başlangıç değeri---- yaptiğı iş unitPriceları tek tek topluyor 
+let total=cart.reduce((acc,product)=>acc+product.unitPrice,0)
+console.log(total)
 
+//map ve filter genellikle kullanılanlar
+
+
+//quantity>2 olanları filtreleyip quantityOver2 değerinin içine atıyor
+let quantityOver2= cart.filter(product=>product.quantiyty>5)
+
+console.log(quantityOver2)
 
 function addToCart(sepet) {
     sepet.push({id:7,productName:"Klavye",quantiyty:10,unitPrice:2000})
@@ -20,6 +30,8 @@ function addToCart(sepet) {
 //addToCart(cart)
 //console.log(cart)
 
+
+/****************************************************/
 let number=10
 
 function sayiTopla(params) {
